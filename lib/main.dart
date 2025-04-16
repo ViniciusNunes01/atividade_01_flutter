@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Meu Aplicativo',
+      title: 'Meu Treino',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         useMaterial3: true,
@@ -40,12 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Título do App'),
+        title: const Text('Acompanhamento de Atividades Físicas'),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
-              // Adicione ação do botão aqui
+              
             },
           ),
         ],
@@ -64,11 +64,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage('assets/images/profile.png'), // Substitua pelo seu asset
+                    backgroundImage: AssetImage('assets/images/profile.png'),
                   ),
                   const SizedBox(height: 10),
                   const Text(
-                    'Menu Principal',
+                    'Treinos',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -79,22 +79,22 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Página Inicial'),
+              leading: const Icon(Icons.run_circle_outlined),
+              title: const Text('Cardio'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('Configurações'),
+              leading: const Icon(Icons.gpp_maybe_outlined),
+              title: const Text('Força'),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              leading: const Icon(Icons.info),
-              title: const Text('Sobre'),
+              leading: const Icon(Icons.sports_gymnastics_outlined),
+              title: const Text('Alongamento'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -107,12 +107,12 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/images/logo.png', // Substitua pelo seu asset
+              'assets/images/logo.png',
               height: 150,
             ),
             const SizedBox(height: 20),
             Text(
-              'Bem-vindo ao meu app!',
+              'Contador de Atividades Físicas',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const SizedBox(height: 20),
             Text(
-              'Contador:',
+              'Treinos Executados:',
               style: TextStyle(
                 fontSize: 18,
                 fontStyle: FontStyle.italic,
@@ -146,6 +146,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
-//commit teste
